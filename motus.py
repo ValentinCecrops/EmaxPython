@@ -40,4 +40,15 @@ def get_random_word():
     return random.choice()
 """
 
-print(check_win("abc", "abc"))
+
+word_to_guess = "ETOILE"
+
+for turn in range(8):
+    player_word = input("Entrez un mot : ").upper()
+    check_word(player_word, word_to_guess)
+    print(Style.RESET_ALL)
+    if check_win(player_word, word_to_guess):
+        print("Gagné !")
+        break
+else:
+    print("Perdu")
