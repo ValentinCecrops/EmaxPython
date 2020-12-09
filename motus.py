@@ -26,7 +26,7 @@ def check_win(player_word, word_to_guess):
 
 
 def get_random_word():
-    random_words = ["CITRON", "ORANGE", "ETOILE", "JARDIN", "TOMATE", "COULIS", "BRIQUE", "STUDIO", "OIGNON", "RAISON", "ACCENT", "CHLORE", "SIMPLE"]
+    random_words = ["CITRON", "ORANGE", "ETOILE", "JARDIN", "TOMATE", "COULIS", "BRIQUE", "STUDIO", "OIGNON", "RAISON", "ACCENT", "CHLORE", "SIMPLE", "PLACER", "HASARD"]
     return random.choice(random_words)
 
 
