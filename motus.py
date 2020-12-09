@@ -4,11 +4,6 @@ from colorama import Back, Style
 
 import random
 
-def get_letter_index(letter, word):
-    for i in range(len(word)):
-        if letter == word[i]:
-            return i
-
 
 def check_letter(letter, letter_index, player_word, word):
     if letter in word:
@@ -26,22 +21,18 @@ def check_word(player_word, word):
 
 
 def check_win(player_word, word_to_guess):
-    guessed_letters_num = 0
-    for i in range(len(word_to_guess)):
-        if player_word[i] == word_to_guess[i]:
-            guessed_letters_num += 1
-    if guessed_letters_num == len(word_to_guess):
+    if player_word == word_to_guess:
         return True
 
 
-"""
 def get_random_word():
-    random_words = [""]
-    return random.choice()
-"""
+    random_words = ["CITRON", "ORANGE", "ETOILE", "JARDIN", "TOMATE", "COULIS", "BRIQUE", "STUDIO", "OIGNON", "RAISON", "ACCENT", "CHLORE", "SIMPLE"]
+    return random.choice(random_words)
 
 
-word_to_guess = "ETOILE"
+#Programme principal
+
+word_to_guess = get_random_word()
 
 for turn in range(8):
     player_word = input("Entrez un mot : ").upper()
